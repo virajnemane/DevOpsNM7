@@ -1,0 +1,5 @@
+1) Click on profile pic
+2) Click on Settings
+3) Click on Developer settings
+4) Click on Personal access tokens
+5) Click on Generate new tokens

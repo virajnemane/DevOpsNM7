@@ -1,0 +1,24 @@
+installation
+------------
+Terraform comes as portable installer. So just download zip file and unzip it. It has only one file terraform which is binary file.
+
+a) Download zip file from below website.
+   https://www.terraform.io/downloads.html
+b) Move terraform binary file to binary PATH location, so that you can execute it from anywhere.
+
+Above two steps can be performed by executing below 3 lines.
+
+Note - execute it from ROOT user only.
+
+TERRAFORM_VER=`curl --silent https://releases.hashicorp.com/terraform/ |grep terraform |tac |tail -n1 |awk '{split($2,c,">"); split(c[2],d,"<"); split(d[1],e,"_"); print e[2]}'`
+wget https://releases.hashicorp.com/terraform/${TERRAFORM_VER}/terraform_${TERRAFORM_VER}_linux_amd64.zip
+unzip terraform_${TERRAFORM_VER}_linux_amd64.zip -d /bin
+
+Note - terraform_userdata.sh script given for automation purpose in userdata-scripts directory.
+
+Pre-requisite
+-------------
+Before running terraform script, below are the pre-requisite
+1) IAM user with Administartor access with secret and access key in handy.
+2) Download and unzip terraform zip file.
+3) keep terraform in user's ~/bin directory, so that it will be available for that user. i.e. /home/ec2-user/bin/terraform 

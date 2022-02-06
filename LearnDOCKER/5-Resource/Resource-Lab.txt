@@ -1,0 +1,17 @@
+#run container without resource restriction
+docker run -itd --rm --name test nginx
+
+#check memory and cpu resource
+docker inspect container test |egrep 'NanoCpus|Memory'
+
+#delete container
+docker stop test
+
+#Now run container with resource limitation
+docker run -itd --rm --name test --memory="300m" --cpus=".2" nginx
+
+#check memory and cpu resource
+docker inspect container test |egrep 'NanoCpus|Memory'
+
+#delete container
+docker stop test

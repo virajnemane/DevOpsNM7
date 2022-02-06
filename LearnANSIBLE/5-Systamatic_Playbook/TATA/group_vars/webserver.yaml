@@ -1,0 +1,7 @@
+HTTP_PORT : 80
+DOCUMENTROOT : "/opt/htdocs"
+PACKAGES: 
+ - httpd
+ - php
+ - php-ldap
+ ENV : "{{ ENV }}"

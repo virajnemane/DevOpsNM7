@@ -1,0 +1,12 @@
+Terraform 
+----------
+1) Automate provisioning of infrastructure
+    Note - Ansible, chef, puppet has focus on automating of installation and configuration of software.
+2) infrastructure as code (IaC)
+3) Keep infrastructure in certian state (compliant)
+4) auditable infrastructure
+    Note - you can keep code in version control system like GIT, will help to maintain history of infrastructure.
+5) Terraform files have .tf extension
+6) Terraform use HCL (Hashicorp Configuration Language)
+
+Terraform AWS documentation - https://www.terraform.io/docs

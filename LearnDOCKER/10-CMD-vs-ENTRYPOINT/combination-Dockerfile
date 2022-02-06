@@ -1,0 +1,3 @@
+FROM ubuntu
+ENTRYPOINT ["/bin/ping","-c","20"]
+CMD ["localhost"]
